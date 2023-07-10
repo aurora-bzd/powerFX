@@ -1,0 +1,16 @@
+//Um estudo da linguagem powerFX
+
+// Para navegar de uma página para outra no aplicativo
+Navigate("nome da pagina", "modo de navegar ex. Cover")
+
+//Criar variável
+Set ("nome da funcao", "valor da variavel ex. "" para vazio")
+
+//Verificar campo em branco
+If(
+    IsBlank('o campo que quer verificar'),
+    Set( //ação que sera executada//
+        "AlertarCampoEmBranco",
+        AlertarCampoEmBranco & "Campo 'Responsável Supervisão' em branco!" & Char(10) // Char(10) pula linha
+    ),
+    false //else
