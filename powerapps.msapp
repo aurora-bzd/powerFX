@@ -16,3 +16,16 @@ If(
     false //else
 
 //Actions - são as opções que começam com On - OnChance; OnSelect; OnVisible
+
+//Formulas - https://learn.microsoft.com/pt-br/power-platform/power-fx/formula-reference
+
+//If - https://learn.microsoft.com/pt-br/power-platform/power-fx/reference/function-if
+
+//Para concatenar strings, pode usar a função Concatenate
+
+//Para Filtros:
+Filter(Table*, Formula1 [, *Formula2*, ... ] )
+
+//Para fazer Pesquisas:
+Search(Table*, SearchString, Column1 [, *Column2*, ... ] )
+
