@@ -14,3 +14,5 @@ If(
         AlertarCampoEmBranco & "Campo 'Responsável Supervisão' em branco!" & Char(10) // Char(10) pula linha
     ),
     false //else
+
+//Actions - são as opções que começam com On - OnChance; OnSelect; OnVisible
