@@ -4,7 +4,7 @@
 Navigate("nome da pagina", "modo de navegar ex. Cover")
 
 //Criar variável
-Set ("nome da funcao", "valor da variavel ex. "" para vazio")
+Set ("nome da variavel", "valor da variavel ex. "" para vazio")
 
 //Verificar campo em branco
 If(
