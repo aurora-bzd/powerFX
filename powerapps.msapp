@@ -29,3 +29,10 @@ Filter(Table*, Formula1 [, *Formula2*, ... ] )
 //Para fazer Pesquisas:
 Search(Table*, SearchString, Column1 [, *Column2*, ... ] )
 
+//Colocar um determinado texto com outra cor: 
+//ex: em uma base de dados se tem as opçoes aprovado, submetido, reprovado. Para que apenas a opÇao aprovado numa galeria fique verde:
+If(ThisItem.Status.Value = "aprovado", Green, Black
+//deve ser feito na opçao COLOR
+
+//Numa Gallery, se modifica apenas o primeiro item, para que seja modificada toda a gallery
+
