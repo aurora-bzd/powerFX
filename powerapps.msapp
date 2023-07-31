@@ -36,3 +36,24 @@ If(ThisItem.Status.Value = "aprovado", Green, Black
 
 //Numa Gallery, se modifica apenas o primeiro item, para que seja modificada toda a gallery
 
+/*Clear Collection - a collection eh um banco de dados que se cria dentro do proprio aplicativo
+com o clear collection voce apaga antes de criar, entao voce vai ter sempre apenas uma linha. 
+Pois antes de criar vai apagar, e assim sempre.
+Para pegar os dados voce pode usar o First(nome da collection), pois vai pegar a primeira linha da coleção,
+contudo como tem apenas uma cleção voce vai sempre pegar ela, pois tem apenas uma linha
+
+ //HTMLText - para fazer pdf e outras formas de texto: melhor, pois se pode usar as funções da linguagem, como pular linha, paragrafo*/
+ 
+// codepen.io - site para codigos
+ 
+//Color.Transparent - para deixar algo transparente 
+
+/*PDF -
+tem que ativar em setting, experimental, pdf
+Set (variavel, PDF(container))*/
+
+/*Flow:
+power apps: file content
+create file - sharepoint: file content: file content
+file name: copia file contente, vai no expressidon, cola, apaga o arroba */
+
