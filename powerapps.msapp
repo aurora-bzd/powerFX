@@ -57,3 +57,6 @@ power apps: file content
 create file - sharepoint: file content: file content
 file name: copia file contente, vai no expressidon, cola, apaga o arroba */
 
+/*Em uma galeria, para manter um item apenas como View, mesmo se entrar em modo de Ediçao (EditForm),
+Deve ir no DisplayMode e digitar na barra de formulas DisplayMode.View
+
