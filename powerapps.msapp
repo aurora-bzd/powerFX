@@ -60,3 +60,6 @@ file name: copia file contente, vai no expressidon, cola, apaga o arroba */
 /*Em uma galeria, para manter um item apenas como View, mesmo se entrar em modo de Ediçao (EditForm),
 Deve ir no DisplayMode e digitar na barra de formulas DisplayMode.View
 
+//Trim -> conta espaços como vazio - muito bom para condiçoes de error
+
+//Len -> conta espaçoes, mt bom para condiçoes de error tambem, em que se coloca uma quantidade minima de caracteres para uma palavra 
