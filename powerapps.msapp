@@ -63,3 +63,7 @@ Deve ir no DisplayMode e digitar na barra de formulas DisplayMode.View
 //Trim -> conta espaços como vazio - muito bom para condiçoes de error
 
 //Len -> conta espaçoes, mt bom para condiçoes de error tambem, em que se coloca uma quantidade minima de caracteres para uma palavra 
+
+//DateDiff -> calcula a diferença entre os dias -> usado para limitar o dia que deve ser escolhido no minimo
+// exemplo: If(DateDiff(DataCardValue2.SelectedDate, Today()) < 0, Set(FormErrorReceiptDate, true), Set(FormErrorReceiptDate, false))
+// neste exemplo so se pode selecionar datas que sao anterior ao dia de hoje, incluindo o dia de hoje
