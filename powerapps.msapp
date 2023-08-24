@@ -71,4 +71,4 @@ Deve ir no DisplayMode e digitar na barra de formulas DisplayMode.View
 
 //-------------PARSE JSON---------------
 //ARRAYS:
-Index(Table(ParseJSON(TextInput10.Text)),2).Value
+Text(Index(Table(ParseJSON(TextInput10.Text)),2).Value)
