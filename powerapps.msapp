@@ -72,3 +72,5 @@ Deve ir no DisplayMode e digitar na barra de formulas DisplayMode.View
 //-------------PARSE JSON---------------
 //ARRAYS:
 Text(Index(Table(ParseJSON(TextInput10.Text)),2).Value)
+//Para aparecer apenas se o active for true
+Filter(Table(ParseJSON(TextInput10.Text).employees),Boolean(ThisRecord.Value.active) = true)
