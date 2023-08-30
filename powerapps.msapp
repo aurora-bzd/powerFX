@@ -74,3 +74,62 @@ Deve ir no DisplayMode e digitar na barra de formulas DisplayMode.View
 Text(Index(Table(ParseJSON(TextInput10.Text)),2).Value)
 //Para aparecer apenas se o active for true
 Filter(Table(ParseJSON(TextInput10.Text).employees),Boolean(ThisRecord.Value.active) = true)
+
+
+//----------PARSE JSON COM ATTACHMEMTE ---------------
+ClearCollect(
+    _varDados,
+    {
+        supervidor: SupervisorValue.Selected.DisplayName,
+        responsavel: ResponsavelValue.Selected.DisplayName,
+        local: LocalValue.Selected.Value,
+        atividade: AtividadeValue.Selected.Value,
+        identificador: IdentificadorValue.Text,
+        operador: OperadorValue.Text,
+        data: DatePicker2.SelectedDate,
+        operador_executando: RadioOperadorExcutando.Selected.Value,
+        listas_operadores: RadioListaOperadores.Selected.Value,
+        duto: RadioDuto.Selected.Value,
+        materiais_utilizaods: RadioMateriaisUtilizados.Selected.Value,
+        instrumentos_medicao_limpos: RadioInstrumentosMedicaoLimpos.Selected.Value,
+        instrumentos_no_prazo: RadioInstrumentosNoPrazo.Selected.Value,
+        instrumentos_registrados: RadioInstrumentosRegistrados.Selected.Value,
+        manuseio_correto: RadioManuseioCorreto.Selected.Value,
+        inspecao_visual_realizada: RadioInspecaoVisualRealizada.Selected.Value,
+        documento_ipad: RadioDocumentoIPAD.Selected.Value,
+        preenchido_adequado: RadioPreenchidoAdequado.Selected.Value,
+        duvidas_documento: RadioDuvidasDocumento.Selected.Value,
+        fotos: RadioFotos.Selected.Value,
+        descricao: DescricaoValue.Text
+        //anexos: DataCardValue37.Attachments
+    }
+)
+;
+
+Set(IDjson,supervisao_de_autocontrole_json.Run(
+    JSON(
+        First(_varDados),
+        JSONFormat.IgnoreBinaryData & JSONFormat.IgnoreUnsupportedTypes
+    )
+).idedid);
+
+ForAll(
+    DataCardValue37.Attachments,
+    AnexosSupervisaoAutocontrole.Run(
+        IDjson,
+        {
+            file:
+            {
+                contentBytes:Value,
+                name:Name
+            }
+        }
+    )
+);
+
+Notify("Enviado com Sucesso!", NotificationType.Success, 1400);
+Navigate(Início);
+
+
+
+
