@@ -135,3 +135,7 @@ Navigate(Início);
 //DisplayMode.View em algum campo de uma gallery powerapps para que o campos apareça apenas como view.
 If(FormStatus = "New", LookUp(Expenses, Status.Value = "SUBMITTED").Status, ThisItem.Status) // Default
 // o codigo a cima serva para fazer aparecer o status como submitted sempre que alguem for adicionar um newform, aula 78
+
+
+//TRIM
+//Trim é uma função que vai tirar os espaços vazios antes e depois na string
