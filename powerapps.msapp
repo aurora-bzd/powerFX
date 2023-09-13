@@ -139,3 +139,10 @@ If(FormStatus = "New", LookUp(Expenses, Status.Value = "SUBMITTED").Status, This
 
 //TRIM
 //Trim é uma função que vai tirar os espaços vazios antes e depois na string
+
+// ao se colocar varios botoes, em que se quer que eles alternem a cor ao serem selecionados, no On Select, adicione uma variavel com o valor de cada botao, mesmo nome de variavel, exemplo:
+ Set(ULLevel, 1), Set(ULLevel, 2), Set(ULLevel, 3), Set(ULLevel, 4), Set(ULLevel, 5)
+// no campo Fill, se faz a lógica: 
+If(ULLevel = 1, RGBA(56, 96, 178, 1), Color.DimGrey), If(ULLevel = 2, RGBA(56, 96, 178, 1), Color.DimGrey), If(ULLevel = 3, RGBA(56, 96, 178, 1), Color.DimGrey),
+If(ULLevel = 4, RGBA(56, 96, 178, 1), Color.DimGrey), If(ULLevel = 5, RGBA(56, 96, 178, 1), Color.DimGrey)
+// AULA 88 Udemy
