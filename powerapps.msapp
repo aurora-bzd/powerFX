@@ -146,3 +146,12 @@ If(FormStatus = "New", LookUp(Expenses, Status.Value = "SUBMITTED").Status, This
 If(ULLevel = 1, RGBA(56, 96, 178, 1), Color.DimGrey), If(ULLevel = 2, RGBA(56, 96, 178, 1), Color.DimGrey), If(ULLevel = 3, RGBA(56, 96, 178, 1), Color.DimGrey),
 If(ULLevel = 4, RGBA(56, 96, 178, 1), Color.DimGrey), If(ULLevel = 5, RGBA(56, 96, 178, 1), Color.DimGrey)
 // AULA 88 Udemy
+
+//Para limitar que seja anexado apenas um tipo de arquivo, no botao que vai enviar o anexo, no displaymode:
+If(
+   Last(
+       Split(
+         First(
+            DataCardValue17.Attachments).Name, "."
+       )
+   ).Value = "pdf", DisplayMode.Edit, DisplayMode.Disabled)
